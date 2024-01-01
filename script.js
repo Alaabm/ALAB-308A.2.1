@@ -56,3 +56,23 @@ class Adventurer extends Character {
         super.roll();
     }
 }
+
+class Companion extends Adventurer{
+    constructor (name, type) {
+        super(name, type);
+        //Companion is a specific type of Companion and name
+        this.name = name;
+        this.type = type;
+        // Every Companion has accessories
+        this.accessories.push("hat", "sunglasses")
+        //Companions have the ability to teleprt
+        teleport () 
+        console.log(`${this.name} is teleporting...`);
+        super.roll();
+        //Companions have the ability to fly
+        fly () 
+        console.log(`${this.name} is flying...`);
+        super.roll();
+        
+}
+}
